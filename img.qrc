@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/tasse.jpg</file>
+        <file>image/default.png</file>
+        <file>image/cappuccino.png</file>
+        <file>image/espresso.png</file>
+        <file>image/latte_macchiato.png</file>
+        <file>image/favorit.png</file>
+        <file>image/kaffeestaerke.png</file>
+        <file>image/ok.png</file>
+        <file>image/startstop.png</file>
+        <file>image/tassengroesse.png</file>
+        <file>image/zurueck.png</file>
+        <file>image/zweitassen.png</file>
+        <file>image/caffeecrema.png</file>
+        <file>image/espressomacch.png</file>
+        <file>image/milch.png</file>
+        <file>image/milchschaum.png</file>
+        <file>image/menu.png</file>
+    </qresource>
+</RCC>
