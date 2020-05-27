@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2020-05-26T21:25:40. -->
+<!-- Written by QtCreator 4.11.0, 2020-05-27T13:01:31. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -288,8 +288,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/root/[Q]Qt/Kaffemaschine_Demo/Kaffemaschine_Demo.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/root/[Q]Qt/Kaffemaschine_Demo/Kaffemaschine_Demo.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Kaffemaschine_Demo2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/root/[G]Git/Qt5/demo/coffee_machine_demo/Kaffemaschine_Demo.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/root/[G]Git/Qt5/demo/coffee_machine_demo/Kaffemaschine_Demo.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

@@ -43,6 +43,7 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    kdisplay.ui \
     widget.ui
 
 # Default rules for deployment.
@@ -52,3 +53,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     img.qrc
+
+DISTFILES +=

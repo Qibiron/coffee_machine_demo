@@ -7,6 +7,12 @@ Widget::Widget(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // set black background
+    QPalette pal = palette();
+    pal.setColor(QPalette::Background, QColor(25,25,25));
+    setAutoFillBackground(true);
+    setPalette(pal);
+
     // init cafe image
     ui->espresso->setImage(":/image/espresso.png");
     ui->espressomacch->setImage(":/image/espressomacch.png");
@@ -30,9 +36,9 @@ Widget::Widget(QWidget *parent)
 
 
     // init cafe button states
-//    ui->espresso->setState(KButtonFunction::Espresso);
-//    ui->espressomacch->setState(KButtonFunction::EspressoMacch);
-//    ui->caffecrema->setState(KButtonFunction::CaffeCrema);
+    ui->espresso->setState(KButtonFunction::Espresso);
+    ui->espressomacch->setState(KButtonFunction::EspressoMacch);
+    ui->caffecrema->setState(KButtonFunction::CaffeCrema);
     ui->cappuccino->setState(KButtonFunction::Cappuccino);
     ui->lattemacchiato->setState(KButtonFunction::LatteMacchiato);
     ui->milchkaffee->setState(KButtonFunction::Milchkaffee);
@@ -40,24 +46,29 @@ Widget::Widget(QWidget *parent)
     ui->spezielleGetraenke->setState(KButtonFunction::SpezielleGetraenke);
 
 
-
-
-
     // init function button states
     ui->startStop->setState(KButtonFunction::StartStop);
-
-
     ui->kaffeestaerke->setState(KButtonFunction::Kaffeestaerke);
-
-
     ui->tassegroesse->setState(KButtonFunction::Tassengroesse);
 
 
+    void (KButton::*ps)(int) = &KButton::stateChanged;
+    void (KDisplay::*pg)(int) = &KDisplay::getraenkeChanged;
+
+    connect(ui->espresso,ps,ui->display,pg);
+    connect(ui->espressomacch,ps,ui->display,pg);
+    connect(ui->caffecrema,ps,ui->display,pg);
+    connect(ui->cappuccino, ps, ui->display,pg);
+    connect(ui->lattemacchiato,ps,ui->display,pg);
+    connect(ui->milchkaffee,ps,ui->display,pg);
+    connect(ui->milchschaum,ps,ui->display,pg);
+    connect(ui->spezielleGetraenke,ps,ui->display,pg);
 
 
-//    connect(ui->kaffeestaerke, &KButton::stateChanged, [this](){
-//        ui->textBrowser->append("Kaffestaerke update");
-//    });
+    connect(ui->kaffeestaerke, &KButton::stateChanged, ui->display, &KDisplay::kaffeestaerkeChanged);
+    connect(ui->tassegroesse, &KButton::stateChanged, ui->display,&KDisplay::tassengroesseChanged);
+
+
 
 }
 

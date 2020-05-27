@@ -19,7 +19,7 @@ void KButton::rollState()
 
         emit stateChanged(this->state->at(0));
     }
-    qDebug() << "To be done!";
+    else qDebug() << "To be done!";
 }
 
 
@@ -53,30 +53,35 @@ void KButton::setState(KButtonFunction f)
 
     switch(f){
         case KButtonFunction::Espresso:
-
-
+        stateInit = {static_cast<int>(Espresso::Espresso1),
+                     static_cast<int>(Espresso::Espresso2)};
         break;
         case KButtonFunction::EspressoMacch:
-
+        stateInit = {static_cast<int>(EspressoMacch::EspressoMacch1),
+                     static_cast<int>(EspressoMacch::EspressoMacch2)};
 
         break;
         case KButtonFunction::CaffeCrema:
-
-
+        stateInit = {static_cast<int>(CaffeCrema::CaffeCrema1),
+                     static_cast<int>(CaffeCrema::CaffeCrema2)};
         break;
         case KButtonFunction::Cappuccino:
-
+        stateInit = {static_cast<int>(Cappuccino::Cappuccino1),
+                     static_cast<int>(Cappuccino::Cappuccino2)};
 
         break;
         case KButtonFunction::LatteMacchiato:
-
+        stateInit = {static_cast<int>(LatteMacchiato::LatteMacchiato1),
+                     static_cast<int>(LatteMacchiato::LatteMacchiato2)};
 
         break;
-        case KButtonFunction::Milchkaffee:
-
+        case KButtonFunction::Milchkaffee:        
+            stateInit = {static_cast<int>(Milchkaffee::Milchkaffee1),
+                         static_cast<int>(Milchkaffee::Milchkaffee2)};
         break;
         case KButtonFunction::Milchschaum:
-
+            stateInit = {static_cast<int>(Milchschaum::Milchschaum1),
+                         static_cast<int>(Milchschaum::Milchschaum2)};
         break;
         case KButtonFunction::SpezielleGetraenke:
             stateInit = {static_cast<int>(SpezielleGetraenke::Flat_White),
@@ -102,7 +107,7 @@ void KButton::setState(KButtonFunction f)
                          static_cast<int>(Tassengroesse::klein)};
 
         break;
-        default: ;
+       // default: ;
 
     }
 

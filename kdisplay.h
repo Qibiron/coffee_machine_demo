@@ -1,23 +1,28 @@
-#ifndef KDisplay_H
-#define KDisplay_H
+#ifndef KDISPLAY_H
+#define KDISPLAY_H
 
-#include <QTextBrowser>
+#include <QWidget>
+#include "KEnumType.h"
 
-class KDisplay : public QTextBrowser
+namespace Ui {
+class KDisplay;
+}
+
+class KDisplay : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit KDisplay(QWidget *parent = nullptr);
+    ~KDisplay();
 
-signals:
-
+public slots:
+    void getraenkeChanged(int);
+    void kaffeestaerkeChanged(int);
+    void tassengroesseChanged(int);
 
 private:
-
-//    Kaffee
-//    Staerke
-//    Groesse
-
+    Ui::KDisplay *ui;
 };
 
-#endif // KDisplay_H
+#endif // KDISPLAY_H
